@@ -14,6 +14,8 @@ output:
 
 # [WUR Geoscripting](https://geoscripting-wur.github.io/) <img src="http://www.wur.nl/upload/b43b7095-e452-482a-8969-fed9a50393a8_WUR_RGB_standard.png" alt="WUR logo" style="height: 35px;"/>
 
+Hi. Good morning! Today we will have fun with Python by playing with social media data. 
+
 # Harvesting tweets with Python
 
 As background knowledge it is assumed that you know what a JSON is. If not, have a look at [JSON Intro](https://www.w3schools.com/js/js_json_intro.asp). Also acquaint yourself yourself with the datastructure of tweets. You can find it on [API Tweets](https://dev.twitter.com/overview/api/tweets). Try to find out for example where spatial references are made in a tweet.
@@ -22,11 +24,24 @@ As background knowledge it is assumed that you know what a JSON is. If not, have
 * 13:30-14:15: Feedback and presentation about social media as a source of spatial data
 * 14:15-17:00 Assignment
 
+# Setup your Conda environment
+
+There are various packages to work with twitter data in Python.
+One great Python package for twitter data handling is [Twython](https://twython.readthedocs.io/en/latest/). Twython is an actively maintained, pure Python wrapper for the Twitter API. It supports both normal and streaming Twitter APIs. Today we will work with both APIs. Let's setup the conda environment for today with the Spyder IDE.
+
+```{r, eval=FALSE, engine='bash'}
+conda create --name twitterpython python=3 geopandas spyder
+conda activate twitterpython
+conda install --channel conda-forge twython folium matplotlib psycopg2
+```
+
 # Python notebooks for the self-study
 
-[Connecting and harvesting real-time tweets](http://nbviewer.jupyter.org/github/GeoScripting-WUR/PythonWeek/blob/gh-pages/ConnectingandharvestingtweetswithPython.ipynb)
+Below are the Jupyter Notebooks that contain the tutorials for today.
 
-[Harvesting real-time tweets](http://nbviewer.jupyter.org/github/GeoScripting-WUR/PythonWeek/blob/gh-pages/HarvestingRealTimeTweets.ipynb)
+[Connecting and harvesting real-time tweets](http://nbviewer.jupyter.org/github/GeoScripting-WUR/PythonTwitter/blob/master/ConnectingandharvestingtweetswithPython.ipynb)
+
+[Harvesting real-time tweets](http://nbviewer.jupyter.org/github/GeoScripting-WUR/PythonTwitter/blob/master/HarvestingRealTimeTweets.ipynb)
 
 
 # Assignment 14
@@ -48,7 +63,6 @@ If you want to go beyond todays tutorials, have a look at some cookbooks and exa
 
 * [Mining-the-Social-Web](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/blob/master/ipynb/Chapter%201%20-%20Mining%20Twitter.ipynb)
 * [Twitter Cookbook](http://nbviewer.jupyter.org/github/ptwobrussell/Mining-the-Social-Web-2nd-Edition/blob/master/ipynb/Chapter%209%20-%20Twitter%20Cookbook.ipynb)
-* [Example: real-time twitter activity map](https://www.tweetping.net/)
 * [Postgis Quickstart](https://live.osgeo.org/en/quickstart/postgis_quickstart.html)
 
 
